@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Flexbox & Bootstrap</title>
+   <meta name="description" content="Обалденный сайт для покупки элитных автомобилей почти даром">
+   <meta property="og:image:height" content="462">
+   <meta property="og:image:width" content="883">
+   <meta property="og:title" content="LOGOAUTO">
+   <meta property="og:url" content="https://stavrdriff.github.io/HomeWorks/work10/">
+   <meta property="og:image" content="https://stavrdriff.github.io/HomeWorks/work10/img/og-image.jpg">
+   <meta property="og:description" content="Обалденный сайт для покупки элитных автомобилей почти даром">
+   <meta name="twitter:card" content="summary">
+   </meta>
+</head>
+
+<body>
+   <div class="container">
+      <header class="logoauto">
+
+         <div class="logo">
+            <a href="index.html" class="logo__logo logo__logo_red" title="LOGOAUTO Home">logo<span>auto</span></a>
+         </div>
+         <div class="menu">
+            <input type="checkbox" id="burger" class="burger">
+            <label for="burger" class="menu__burger">
+               <span class="menu__burSpan"></span>
+               <span class="menu__burSpan"></span>
+               <span class="menu__burSpan"></span>
+            </label>
+            <ul class="menu__nav">
+               <li class="menu__li"><a class="menu__a" href="index.html" title="LOGOAUTO Home">Home</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO About us">About us</a></li>
+               <li class="menu__li"><a class="menu__a" href="shop.html" title="LOGOAUTO Shop">Shop</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Blog">Blog</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Contacts">Contacts</a></li>
+               <li class="menu__li"><a class="menu__a" href="index.html#howItWorks" title="LOGOAUTO How it Works">How
+                     it
+                     Works</a></li>
+            </ul>
+         </div>
+         <div class="buttons">
+            <a href="login.html" class="buttons__login">Login</a>
+            <a href="login.html" class="buttons__register">Register</a>
+         </div>
+
+      </header>
+   </div>
+   <section class="loginMain">
+      <div class="container">
+         <div class="login__btn">
+            <ul class="login__nav">
+               <li class="login__item">
+                  <a href="#login" class="login__aLogin">Login</a>
+               </li>
+               <li class="login__item">
+                  <a href="#register" class="login__aRegister">Register</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="login__body">
+
+            <div class="login__content" id="login">
+               <h1 class="brands__h1 brands__h1_center">Login</h1>
+               <form action="#" method="GET">
+                  <div class="form">
+
+                     <div class="form__item">
+                        <p class="name">E-mail</p>
+                        <input class="form__input" type="email" required>
+                     </div>
+
+                     <div class="form__item">
+
+                        <p class="name">Password</p>
+                        <input class="form__input" type="password" minlength="3" maxlength="12" required>
+
+                     </div>
+                     <a class="form__forgotPassword" href="#">Forgot your password?</a>
+                     <label class="brands__label form__label_marginTop">
+                        <input type="checkbox" class="brands__checkInvisible">
+                        <p class="brands__name">Remember me</p>
+                     </label>
+                     <button class="buttons__register form__btn_center">Login</button>
+                  </div>
+               </form>
+            </div>
+
+            <div class="login__content" id="register">
+               <h1 class="brands__h1 brands__h1_center">Create an Account</h1>
+               <form action="#" method="GET">
+                  <div class="form">
+                     <div class="form__items">
+                        <div class="form__item_short">
+                           <p class="name">First Name</p>
+                           <input class="form__input" type="text" minlength="3" required>
+                        </div>
+                        <div class="form__item_short">
+                           <p class="name">First Name</p>
+                           <input class="form__input" type="text" minlength="3" required>
+                        </div>
+                     </div>
+                     <div class="form__item">
+                        <p class="name">E-mail</p>
+                        <input class="form__input" type="email" required>
+                     </div>
+                     <div class="form__radio">
+                        <input type="radio" class="form__checkRadio" name="sex" id="male" required>
+                        <label for="male" class="form__radioLabel">Male</label>
+
+                        <input type="radio" class="form__checkRadio" name="sex" id="female" required>
+                        <label for="female" class="form__radioLabel">Female</label>
+                     </div>
+                     <div class="form__items">
+                        <div class="form__item_short">
+                           <p class="name">Password</p>
+                           <input class="form__input" type="password" minlength="3" maxlength="12" required>
+                        </div>
+                        <div class="form__item_short">
+                           <p class="name">Confirm Password</p>
+                           <input class="form__input" type="password" minlength="3" maxlength="12" required>
+                        </div>
+                     </div>
+                     <button class="buttons__register form__btn_center">Register</button>
+                  </div>
+               </form>
+               <p class="privacypolicy">
+                  By clicking the 'Sign Up' button, you confirm that you accept our<br><a class="privacypolicy__a"
+                     href="#">Terms of Use</a> and <a class="privacypolicy__a" href="#">Privacy Policy</a>.
+               </p>
+            </div>
+
+         </div>
+
+      </div>
+   </section>
+   <footer>
+      <div class="container">
+         <div class="footer__flex">
+            <div class="logo footer__logo_white">
+               <a href="index.html" class="logo__logo" title="LOGOAUTO Home">logo<span>auto</span></a>
+            </div>
+            <div class="menu">
+               <ul class="menu__nav">
+                  <li class="menu__li"><a class="menu__a" href="index.html" title="LOGOAUTO Home">Home</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO About us">About us</a></li>
+                  <li class="menu__li"><a class="menu__a" href="shop.html" title="LOGOAUTO Shop">Shop</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Blog">Blog</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Contacts">Contacts</a></li>
+                  <li class="menu__li"><a class="menu__a" href="index.html#howItWorks" title="LOGOAUTO How it Works">How
+                        it
+                        Works</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("normalize.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  background: #4f56bb;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  padding: 15px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 15px;
+}
+
+.content {
+  margin: 0 10%;
+}
+
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news__block {
+  width: 33.3%;
+  min-height: 100%;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ccc;
+}
+
+.news__image {
+  width: 100%;
+  padding-top: 60%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.news__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-top: auto;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-timing-function: linear !important;
+          transition-timing-function: linear !important;
+}
+
+.slick-slide {
+  height: unset;
+  margin: 0 10px;
+}
+
+.slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slick-prev,
+.slick-next {
+  position: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+.options {
+  padding: 1rem;
+}
+
+.news__purchase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: auto;
+}
+
+.price {
+  margin-bottom: 20px;
+}
+
+.searching {
+  width: 100%;
+}
+
+.searching__form {
+  margin: 0 auto;
+  width: 60%;
+  height: 2em;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searching__input {
+  font-size: 1.2em;
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: none;
+  text-indent: 0.5em;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+
+.searching__input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.searching__input:-ms-input-placeholder {
+  color: #000;
+}
+
+.searching__input::-ms-input-placeholder {
+  color: #000;
+}
+
+.searching__input::placeholder {
+  color: #000;
+}
+
+.searching__btn {
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+
+.searching__type {
+  border-radius: 1em;
+  outline: none;
+}
+
+.films {
+  margin: 50px auto;
+  padding: 30px;
+  width: 80%;
+  background: #0011ff;
+  display: none;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.films__item {
+  min-height: 20px;
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.films__imgs {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 150%;
+}
+
+.films__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.films__description {
+  padding: 20px;
+  margin-top: auto;
+}
+
+.films__modal {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

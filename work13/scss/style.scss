@@ -1,0 +1,158 @@
+.animation {
+   margin: 0 auto;
+   display: flex;
+   width: 70%;
+   overflow: hidden;
+   &__text {
+      font-size: 30px;
+      font-weight: 900;
+      transition: all 1s 1s linear;
+      animation: runstring 3s linear 0.3s infinite;
+      white-space: nowrap;
+      padding-right: 2em;
+   }
+   // &__text:hover {
+   //    animation: runstring 2s linear 0.3s infinite;
+   // }
+}
+@keyframes runstring {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+} //Обнули значения списков
+.watch {
+   font-size: 1em;
+   position: relative;
+}
+.watch__face {
+   //Фон для наших часов
+   position: relative;
+   width: 30em;
+   height: 30em;
+   margin: 2em auto;
+   border-radius: 15em;
+   background: #fff;
+   box-shadow: rgba(0, 0, 0, 0.8) 0.5em 0.5em 4em;
+}
+.minute-marks li {
+   //Стиль для первых 48 делений
+   display: block;
+   width: 0.2em;
+   height: 0.6em;
+   background: #929394;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin: -0.4em 0 0 -0.1em;
+}
+.digits {
+   //Блок с 12 делениями часов
+   width: 30em;
+   height: 30em;
+   border-radius: 15em;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   margin-left: -15em;
+}
+.digits li {
+   //Стили для каждого из 12 делений
+   font-size: 1.6em;
+   display: block;
+   width: 1.6em;
+   height: 1.6em;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   line-height: 1.6em;
+   text-align: center;
+   margin: -0.8em 0 0 -0.8em;
+   font-weight: bold;
+}
+.hours-hand {
+   // Стрелка часов
+   width: 0.8em;
+   height: 7em;
+   border-radius: 0 0 0.9em 0.9em;
+   background: #232425;
+   position: absolute;
+   bottom: 50%;
+   left: 50%;
+   margin: 0 0 -0.8em -0.4em;
+   box-shadow: #232425 0 0 2px;
+   transform-origin: 0.4em 6.2em;
+   transform: rotate(-25deg);
+}
+.minutes-hand {
+   // Анимация стрелки минут
+   width: 0.8em;
+   height: 12.5em;
+   border-radius: 0.5em;
+   background: #343536;
+   position: absolute;
+   bottom: 50%;
+   left: 50%;
+   margin: 0 0 -1.5em -0.4em;
+   box-shadow: #343536 0 0 2px;
+   transform-origin: 0.4em 11em;
+   transform: rotate(62deg);
+}
+.seconds-hand {
+   // Стрелка секунд
+   width: 0.2em;
+   height: 14em;
+   border-radius: 0.1em 0.1em 0 0/10em 10em 0 0;
+   background: #c00;
+   position: absolute;
+   bottom: 50%;
+   left: 50%;
+   margin: 0 0 -2em -0.1em;
+   box-shadow: rgba(0, 0, 0, 0.8) 0 0 0.2em;
+   transform-origin: 0.1em 12em;
+   transform: rotate(120deg);
+}
+
+// .minute-marks li:nth-child(1) {
+//    transform: rotate(6deg) translateY(-12.7em);
+// }
+@for $indexMinute from 1 through 60 {
+   .minute-marks li:nth-child(#{$indexMinute}) {
+      transform: rotate(6deg * $indexMinute) translateY(-10.7em);
+   }
+}
+
+// .digits li:nth-child(1) {
+//    transform: rotate(30deg) translateY(-8.7em);
+// }
+
+@for $index from 1 through 12 {
+   .digits li:nth-child(#{$index}) {
+      transform: rotate(30deg * $index) translateY(-8.7em);
+   }
+}
+@keyframes rotate {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+.seconds-hand {
+   animation: rotate 60s -1s steps(60, end) infinite;
+}
+.minutes-hand {
+   animation: rotate 3600s steps(60, end) infinite;
+}
+.hours-hand {
+   animation: rotate 216000s linear infinite;
+}

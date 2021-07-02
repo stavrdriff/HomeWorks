@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("normalize.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin-left: -30vw;
+  width: 60vw;
+  height: 30vh;
+  min-height: 150px;
+  background: red;
+  text-align: center;
+}
+
+.modal__text {
+  font-size: 2em;
+  color: #fff;
+}
+
+.modal__btn_open {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+}
+
+.trafficLight {
+  background: #000;
+  width: 250px;
+  height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.trafficLight__circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #000;
+}
+
+.trafficLight__circle_red {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: red;
+}
+
+.trafficLight__circle_yellow {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: yellow;
+}
+
+.trafficLight__circle_green {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: green;
+}
+
+#songs_ol {
+  list-style-type: none;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

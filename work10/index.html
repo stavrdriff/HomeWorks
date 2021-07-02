@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Flexbox & Bootstrap</title>
+   <meta name="description" content="Обалденный сайт для покупки элитных автомобилей почти даром">
+   <meta property="og:image:height" content="462">
+   <meta property="og:image:width" content="883">
+   <meta property="og:title" content="LOGOAUTO">
+   <meta property="og:url" content="https://stavrdriff.github.io/HomeWorks/work10/">
+   <meta property="og:image" content="https://stavrdriff.github.io/HomeWorks/work10/img/og-image.jpg">
+   <meta property="og:description" content="Обалденный сайт для покупки элитных автомобилей почти даром">
+   <meta name="twitter:card" content="summary">
+   </meta>
+</head>
+
+<body>
+   <div class="container">
+      <header class="logoauto">
+
+         <div class="logo">
+            <a href="index.html" class="logo__logo logo__logo_red" title="LOGOAUTO Home">logo<span>auto</span></a>
+         </div>
+         <div class="menu">
+            <input type="checkbox" id="burger" class="burger">
+            <label for="burger" class="menu__burger">
+               <span class="menu__burSpan"></span>
+               <span class="menu__burSpan"></span>
+               <span class="menu__burSpan"></span>
+            </label>
+            <!-- <div class="wrap"> -->
+            <ul class="menu__nav">
+               <li class="menu__li"><a class="menu__a" href="index.html" title="LOGOAUTO Home">Home</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO About us">About us</a></li>
+               <li class="menu__li"><a class="menu__a" href="shop.html" title="LOGOAUTO Shop">Shop</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Blog">Blog</a></li>
+               <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Contacts">Contacts</a></li>
+               <li class="menu__li"><a class="menu__a" href="index.html#howItWorks" title="LOGOAUTO How it Works">How
+                     it
+                     Works</a></li>
+            </ul>
+            <!-- </div> -->
+         </div>
+         <div class="buttons">
+            <a href="login.html" class="buttons__login">Login</a>
+            <a href="login.html" class="buttons__register">Register</a>
+         </div>
+
+      </header>
+   </div>
+
+
+   <section class="stock">
+      <div class="container">
+         <div class="stock__article">
+            <p class="stock__p">
+               Could you be our
+            </p>
+            <p class="stock__p_red">
+               next winner?
+            </p>
+            <button class="btn__stock" title="Could you be our next winner?">Enter now</button>
+         </div>
+         <div class="stock__img">
+            <img src="img/Car.png" title="LOGOAUTO - Could you be our next winner?"
+               alt="LOGOAUTO - Could you be our next winner?">
+         </div>
+      </div>
+   </section>
+
+
+   <section class="popular">
+      <div class="container">
+         <div class="popular__header">
+            <div class="title">
+               <h1 class="title__h1">Popular products</h1>
+            </div>
+            <a class="popular__a" href="shop.html">All cars &rarr;</a>
+         </div>
+         <div class="items">
+
+            <div class="card">
+               <div class="card__img">
+                  <a href="#">
+                     <img class="card__img" src="img/item1.jpg" title="2016 Ford Mustang Shelby GT350"
+                        alt="LOGOAUTO - 2016 Ford Mustang Shelby GT350">
+                  </a>
+               </div>
+               <p class="card__name">
+                  2016 Ford Mustang Shelby GT350
+               </p>
+               <div class="card__bottom">
+                  <p class="card__price card__price_red">7.99 <span class="card__discount">9.68</span></p>
+                  <div class="card__tickets">
+                     <p class="card__counter">3290</p>
+                     <a href="#" class="card__a" title="Buy This Car">&rarr;</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card__img">
+                  <a href="#">
+                     <img class="card__img" src="img/item2.jpg" title="2016 Ford Mustang Shelby GT350"
+                        alt="LOGOAUTO - 2016 Ford Mustang Shelby GT350">
+                  </a>
+               </div>
+               <p class="card__name">
+                  2016 Ford Mustang Shelby GT350
+               </p>
+               <div class="card__bottom">
+                  <p class="card__price">7.99 </p>
+                  <div class="card__tickets">
+                     <p class="card__counter">3290</p>
+                     <a href="#" class="card__a" title="Buy This Car">&rarr;</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card__img">
+                  <a href="#">
+                     <img class="card__img" src="img/item3.jpg" title="2016 Ford Mustang Shelby GT350"
+                        alt="LOGOAUTO - 2016 Ford Mustang Shelby GT350">
+                  </a>
+               </div>
+               <p class="card__name">
+                  2016 Ford Mustang Shelby GT350
+               </p>
+               <div class="card__bottom">
+                  <p class="card__price">7.99</p>
+                  <div class="card__tickets">
+                     <p class="card__counter">3290</p>
+                     <a href="#" class="card__a" title="Buy This Car">&rarr;</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card__img">
+                  <a href="#">
+                     <img class="card__img" src="img/item4.jpg" title="2016 Ford Mustang Shelby GT350"
+                        alt="LOGOAUTO - 2016 Ford Mustang Shelby GT350">
+                  </a>
+               </div>
+               <p class="card__name">
+                  2016 Ford Mustang Shelby GT350
+               </p>
+               <div class="card__bottom">
+                  <p class="card__price card__price_red">7.99 <span class="card__discount">9.68</span></p>
+                  <div class="card__tickets">
+                     <p class="card__counter">3290</p>
+                     <a href="#" class="card__a" title="Buy This Car">&rarr;</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+   <section id="howItWorks" class="howItWorks">
+      <div class="container">
+         <div class="title">
+            <h1 class="title__h1 title__h1_centerMargin">How it works</h1>
+         </div>
+         <div class="items">
+            <div class="howItWorks__item">
+               <!-- <div class="howItWorks__img"> -->
+               <!-- <img class="howItWorks__icon" src="img/touchscreen.png" alt=""> -->
+               <svg class="howItWorks__img" viewBox="0 0 64 64">
+                  <use xlink:href="sprite.svg#touchscreen"></use>
+               </svg>
+               <!-- </div> -->
+               <h1 class="howItWorks__h1">
+                  1. Selection of the Car
+               </h1>
+               <p class="howItWorks__p">
+                  We select and offer several car options from US auctions based on your budget
+                  and requirements.
+               </p>
+            </div>
+            <p class="howItWorks__arrow"><span class="icon-arrow-right2"></span></p>
+            <div class="howItWorks__item">
+               <!-- <div class="howItWorks__img"> -->
+               <!-- <img class="howItWorks__icon" src="img/movie-tickets.png" alt=""> -->
+               <svg class="howItWorks__img" viewBox="0 0 64 64">
+                  <use xlink:href="sprite.svg#tickets"></use>
+               </svg>
+               <!-- </div> -->
+               <h1 class="howItWorks__h1">
+                  2. Concluding the Agreement
+               </h1>
+               <p class="howItWorks__p">
+                  The conclusion of the contract gives the opportunity not to worry about the parties for the
+                  fulfillment of their obligations
+               </p>
+            </div>
+            <p class="howItWorks__arrow"><span class="icon-arrow-right2"></span></p>
+            <div class="howItWorks__item">
+               <!-- <div class="howItWorks__img"> -->
+               <!-- <img class="howItWorks__icon" src="img/online-payment.png" alt=""> -->
+               <svg class="howItWorks__img" viewBox="0 0 64 64">
+                  <use xlink:href="sprite.svg#payment"></use>
+               </svg>
+               <!-- </div> -->
+               <h1 class="howItWorks__h1">
+                  3. Payment through the Bank
+               </h1>
+               <p class="howItWorks__p">
+                  Payments are made by invoice, SWIFT transfer through the Bank, which guarantees the transparency and
+                  formality of the transaction..
+               </p>
+            </div>
+            <p class="howItWorks__arrow"><span class="icon-arrow-right2"></span></p>
+            <div class="howItWorks__item">
+               <!-- <div class="howItWorks__img"> -->
+               <!-- <img class="howItWorks__icon" src="img/winner.png" alt=""> -->
+               <svg class="howItWorks__img" viewBox="0 0 64 64">
+                  <use xlink:href="sprite.svg#winner"></use>
+               </svg>
+               <!-- </div> -->
+               <h1 class="howItWorks__h1">
+                  1. Selection of the Car
+               </h1>
+               <p class="howItWorks__p">
+                  We select and offer several car options from US auctions based on your budget
+                  and requirements.
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="items howItWorks__story">
+         <div class="howItWorks__text">
+            <p class="howItWorks__article">
+               "Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What
+               great blokes. Thank you very much! 5 star from me!!!"
+            </p>
+            <p class="howItWorks__name">
+               Danny Churchman
+            </p>
+         </div>
+         <div class="howItWorks__bigImg">
+            <img class="howItWorks__rightImg" src="img/man.jpg" alt="">
+         </div>
+      </div>
+   </section>
+   <section class="latestArticles">
+      <div class="container">
+         <div class="title">
+            <h1 class="title__h1">Latest articles</h1>
+         </div>
+         <div class="items articles__items">
+            <div class="card">
+               <div class="articles__img">
+                  <img src="img/article1.jpg" alt="">
+               </div>
+               <div class="articles__text">
+                  <p class="articles__carName">
+                     Ferrari 458
+                  </p>
+                  <p class="articles__date">
+                     12 November 2020
+                  </p>
+               </div>
+            </div>
+            <div class="card">
+               <div class="articles__img">
+                  <img src="img/article2.jpg" alt="">
+               </div>
+               <div class="articles__text">
+                  <p class="articles__carName">
+                     Aquila Gullwing
+                  </p>
+                  <p class="articles__date">
+                     9 November 2020
+                  </p>
+               </div>
+            </div>
+            <div class="card">
+               <div class="articles__img">
+                  <img src="img/article3.jpg" alt="">
+               </div>
+               <div class="articles__text">
+                  <p class="articles__carName">
+                     2020 Audi S5 Coupe
+                  </p>
+                  <p class="articles__date">
+                     5 November 2020
+                  </p>
+               </div>
+            </div>
+            <div class="card">
+               <div class="articles__img">
+                  <img src="img/article4.jpg" alt="">
+               </div>
+               <div class="articles__text">
+                  <p class="articles__carName">
+                     Ferrari Purosangue SUV
+                  </p>
+                  <p class="articles__date">
+                     25 September 2020
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+   </section>
+   <footer>
+      <div class="container">
+         <div class="footer__flex">
+            <div class="logo footer__logo_white">
+               <a href="index.html" class="logo__logo" title="LOGOAUTO Home">logo<span>auto</span></a>
+            </div>
+            <div class="menu">
+               <ul class="menu__nav">
+                  <li class="menu__li"><a class="menu__a" href="index.html" title="LOGOAUTO Home">Home</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO About us">About us</a></li>
+                  <li class="menu__li"><a class="menu__a" href="shop.html" title="LOGOAUTO Shop">Shop</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Blog">Blog</a></li>
+                  <li class="menu__li"><a class="menu__a" href="#" title="LOGOAUTO Contacts">Contacts</a></li>
+                  <li class="menu__li"><a class="menu__a" href="index.html#howItWorks" title="LOGOAUTO How it Works">How
+                        it
+                        Works</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+
+
+
+
+</body>
+
+</html>

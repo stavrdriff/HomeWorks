@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulp Vue.js</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<body>
+    <!-- @ - v-on -->
+    <!-- : - v-bind -->
+
+    <div class="vue" id="vue">
+        <div class="notify" v-show="show_notify">
+            {{ text_notify }}
+            <button v-on:click="hideNotify()" class="notify__close">X</button>
+        </div>
+        <!-- <h1>{{ show ? title : 'Hello!'}}</h1> -->
+        <!-- <h1>{{ title.toUpperCase()}}</h1> -->
+        <!-- <h1 v-html="title"></h1> -->
+        <!-- <h1 v-html="show ? title : 'Hello!'" v-bind:class="show ? 'show' : 'noshow'"></h1> -->
+        <h1>{{ firstLetterToUpperCase (title) }}</h1>
+
+        <!-- <input type="text" v-model="input_text">
+        <h2>{{ input_text }}</h2> -->
+
+
+
+        <div class="input">
+            <div class="input__wrap">
+                <textarea id="input__text" class="input__text" type="text" v-model="input_text"></textarea>
+            </div>
+            <div class="input__wrap" :style="{ background: templateText }">
+                <button v-on:click="showText()">Show text</button>
+                <p id="input__p" class="input__resault" v-if="show_input_text">{{ templateText }}
+                </p>
+            </div>
+        </div>
+        <div class="mouse">
+            <div class="mouse__wrap">
+                <button v-on:click.right.prevent="showMouse(rightMouse)" v-on:click="showMouse(leftMouse)">Left or
+                    Right</button>
+                <p>{{whatMouse}}</p>
+            </div>
+            <div class="mouse__wrap">
+                <button v-on:click='showTime()'>What time is it now</button>
+                <p v-if="show_time">{{formatTime}}</p>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row gy-2">
+
+                <div class="col-sm-6 col-md-4 col-xl-3" v-for="(product, i) in products" :key="i">
+                    <div class="card">
+                        <img :src="'src/image/' + product.image" :alt="product.title">
+                        <div class="card__name text-center mt-2 mb-1">{{i + "-"+ product.title }}</div>
+                        <div class="price">
+                            <span class="price_new">${{getNewPrice(product)}}</span>
+                            <span class="price_old" v-if="product.discount">${{product.price}}</span>
+                        </div>
+                        <div class="col-12 px-3">
+                            <button type="button" class="w-100 btn btn-primary">Primary</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/js/script.js"></script>
+
+</body>
+
+</html>

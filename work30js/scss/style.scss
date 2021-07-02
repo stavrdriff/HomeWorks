@@ -1,0 +1,84 @@
+// @import url("../fonts/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+// @import url("../fonts/icomoons/style.css");
+@import url("normalize.css");
+
+$JoseFont: "Josefin Sans", sans-serif;
+$AleoFont: "aleo", sans-serif;
+
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: $JoseFont;
+   font-size: 16px;
+   font-weight: 400;
+   padding: 20px;
+   background: #4f56bb;
+   @media (max-width: 600px) {
+      font-size: 12px;
+   }
+}
+.container {
+   padding: 0 5%;
+}
+.article {
+   padding: 0.5em;
+   border: 1px solid #ddd;
+   border-radius: 1em;
+   margin: 1em -0.5em;
+   &__img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 1em;
+      margin: 0 auto;
+      display: block;
+   }
+}
+
+.btn {
+   color: #fff;
+   background-color: #991f66;
+   border-color: #991f66;
+   transition: all 0.2s;
+   display: inline-block;
+   font-weight: 400;
+   line-height: 1.5;
+   text-align: center;
+   text-decoration: none;
+   vertical-align: middle;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   padding: 0.2rem 0.5rem;
+   font-size: 1rem;
+   border-radius: 0.25rem;
+   transition: all 0.15s ease-in-out;
+   &:hover {
+      opacity: 0.7;
+   }
+}
+
+.tags {
+   display: flex;
+   flex-wrap: wrap;
+
+   &__item {
+      padding: 0.2em 0.5em;
+      border: 1px solid #1fa296;
+      background: #7de8de;
+      border-radius: 0.25rem;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+         opacity: 0.7;
+      }
+   }
+}
+.comment__input {
+   width: 100%;
+}

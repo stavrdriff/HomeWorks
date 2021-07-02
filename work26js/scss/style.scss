@@ -1,0 +1,84 @@
+// @import url("../fonts/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+// @import url("../fonts/icomoons/style.css");
+@import url("normalize.css");
+
+$JoseFont: "Josefin Sans", sans-serif;
+$AleoFont: "aleo", sans-serif;
+
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: $JoseFont;
+   font-size: 16px;
+   font-weight: 400;
+   padding: 20px;
+   // color: #fff;
+   // display: flex;
+   @media (max-width: 600px) {
+      font-size: 12px;
+   }
+}
+
+//
+.modal {
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.5);
+   &__content {
+      margin: 200px auto 0;
+      width: 300px;
+      height: 200px;
+      background: #fff;
+   }
+}
+.area {
+   width: 400px;
+   height: 300px;
+   position: relative;
+   background: red;
+   &__toggle {
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: grey;
+      text-align: center;
+      color: #fff;
+   }
+}
+
+.section {
+   height: 2000px;
+   width: 100%;
+   border: 2px solid #000;
+}
+.block {
+   width: 200px;
+   height: 200px;
+   background: pink;
+   margin: 300px 0;
+   transform: translateX(-120%);
+   transition: transform 0.5s ease;
+   &__anim {
+      transform: translateX(0%);
+   }
+}
+header {
+   position: fixed;
+   height: 100px;
+   background: green;
+   z-index: 100;
+}
+.link__active {
+   color: red;
+   font-size: 20px;
+   font-weight: bold;
+}

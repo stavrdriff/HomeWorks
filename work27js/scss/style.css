@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("normalize.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  min-height: calc(100vh - 40px);
+  position: relative;
+}
+
+.tabs {
+  margin: 0 auto;
+  max-width: 550px;
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  margin-left: -275px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: ease 1.5s;
+  transition: ease 1.5s;
+}
+
+.tabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tabs__link {
+  margin: 0 auto;
+  font-size: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  color: #000;
+}
+
+.tabs__link_red {
+  background: red;
+}
+
+.tabs__link_green {
+  background: green;
+}
+
+.tabs__link_blue {
+  background: blue;
+}
+
+.tabs__items {
+  width: 100%;
+  overflow: hidden;
+}
+
+.tabs__item {
+  display: none;
+  width: 100%;
+  min-height: 15em;
+  padding: 2em;
+  border-radius: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tabs__item_red {
+  background: red;
+}
+
+.tabs__item_green {
+  background: green;
+}
+
+.tabs__item_blue {
+  background: blue;
+}
+
+.tabs__h2 {
+  margin: 0 auto 0.5em;
+}
+
+.tabs__p {
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.tabs_active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.tab_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.link_active {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,144 @@
+.star {
+   width: 40px;
+   height: 40px;
+   background: url(../img/GS.png) no-repeat;
+   background-size: contain;
+   display: inline-block;
+   cursor: pointer;
+}
+.star:hover,
+.star_input:checked ~ .star,
+.star_input:hover ~ .star {
+   background: url(../img/BS.png) no-repeat;
+   width: 40px;
+   height: 40px;
+   background-size: contain;
+}
+.star_input {
+   display: none;
+}
+.stars {
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: flex-end;
+}
+
+.bgshop {
+   margin: 0 auto;
+   width: 50%;
+   background: #3b3f45;
+   padding: 30px 0;
+}
+.shopName {
+   margin: 0 auto;
+   width: 50%;
+   background: #4a4f56;
+   padding: 20px 0;
+}
+.shopName h1 {
+   margin: 0 auto;
+   font-size: 28px;
+   color: #eb7e7f;
+}
+.shopName h3 {
+   margin: 0 auto;
+   font-size: 20px;
+   color: #eb7e7f;
+}
+.shoping {
+   margin: 0 auto;
+   text-align: center;
+}
+.shopList {
+   width: 70%;
+   margin: 0 auto;
+   text-align: left;
+}
+
+.listFirst {
+   margin: 0 auto;
+   width: 100%;
+   height: 40px;
+   background: #88839e;
+   border-top: 2px solid #88839e;
+   border-bottom: 2px solid #88839e;
+   font-size: 20px;
+   color: #fff;
+   box-sizing: border-box;
+   padding: 5px 0 0 5px;
+   cursor: pointer;
+}
+.listSecond {
+   margin: 0 auto;
+   width: 100%;
+   height: 40px;
+   background: #7a7593;
+   border-top: 2px solid #7a7593;
+   border-bottom: 2px solid #7a7593;
+   font-size: 20px;
+   color: #fff;
+   box-sizing: border-box;
+   padding: 5px 0 0 5px;
+   cursor: pointer;
+}
+.smallSpan {
+   font-size: 15px;
+}
+.smallSpan::before {
+   content: "(";
+}
+.smallSpan::after {
+   content: ")";
+}
+.listFirst:hover,
+.listSecond:hover {
+   background: #625e77;
+   border-top: 2px solid #fff;
+   border-bottom: 2px solid #fff;
+   transition: 0.2s;
+}
+.push {
+   display: none;
+}
+.push:checked ~ span{
+   text-decoration: line-through;
+}
+.push + span::before {
+   content:'';
+   display: inline-block;
+   background-image: url(../img/blank-check-box.svg);
+   background-color: #fff;
+   width: 22px;
+   height: 22px;
+   background-size: contain;
+}
+.push:checked + span::before {
+   content:'';
+   display: inline-block;
+   background-image: url(../img/check-box.svg);
+   background-color: #fff;
+   width: 22px;
+   height: 22px;
+   background-size: contain;
+}
+
+.bonAppetit {
+   display: block;
+   width: 100%;
+   height: 40px;
+   margin: 30px auto;
+   background: #4a4f56;
+   border: 2px solid #4a4f56;
+   font-size: 20px;
+   color: #eb7e7f;
+   cursor: pointer;
+   outline: none;
+}
+.bonAppetit:hover {
+   transition: 0.3s;
+   box-shadow: 0px 0px 4px rgb(250, 250, 250, 0.8);
+   text-shadow: 0px 0px 2px rgb(250, 250, 250, 0.6);
+}
+.bonAppetit:active {
+background: #000;
+}
