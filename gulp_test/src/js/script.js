@@ -42,6 +42,53 @@ let app = new Vue({
             price: 29.99,
             image: 'image1.jpg'
          }
+      ],
+      headerLinks: [
+         {
+            name: 'Occasions',
+            href: '#',
+            title: 'push me',
+         },
+         {
+            name: 'All Categories',
+            href: '#',
+            title: 'push me',
+         },
+         {
+            name: 'Gifts & Bundles',
+            href: '#',
+            title: 'push me',
+         },
+         {
+            name: 'Our Brands',
+            href: '#',
+            title: 'push me',
+         },
+         {
+            name: 'About Us',
+            href: '#',
+            title: 'push me',
+         }
+      ],
+      headerButtons: [
+         {
+            src: 'loupe.png',
+            alt: '',
+            href: '#',
+            title: 'Searching',
+         },
+         {
+            src: 'user.png',
+            alt: '',
+            href: '#',
+            title: 'Account',
+         },
+         {
+            src: 'shopping-cart.png',
+            alt: '',
+            href: '#',
+            title: 'Cart',
+         },
       ]
    },
    methods: {
@@ -81,9 +128,28 @@ let app = new Vue({
       },
       getNewPrice(product) {
          let newPrice = product.discount ?
-            (product.price * (1 - product.discount / 100)).toFixed(2) :
+            (product.price * (1 - product.discount / 100)) :
             product.price;
          return newPrice;
+      },
+   },
+   filters: {
+      viewPrice(value, currency) {
+         return currency + value.toFixed(2);
       }
+   },
+   computed: {
+      averagePrice: {
+         get: function () {
+            return this.prices_summ / this.products.length;
+         },
+         set: function (value) {
+            let summ_price = 0;
+            value.forEach(el => {
+               summ_price += +el.price
+            })
+            this.prices_summ = summ_price;
+         }
+      },
    }
 })

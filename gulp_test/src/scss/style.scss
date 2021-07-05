@@ -116,3 +116,45 @@ body {
         flex-direction: column;
     }
 }
+.header {
+    width: 100%;
+    padding: 20px 0;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav {
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+        width: 100%;
+        padding-left: 60px;
+    }
+    &__li {
+        list-style: none;
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 15px;
+        color: #1f1f1f;
+    }
+    &__buttons {
+        display: flex;
+        gap: 10px;
+    }
+    &__button {
+        width: 60px;
+        height: 60px;
+        border: 1px solid #bfbfbf;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.container {
+    width: 1170px;
+}

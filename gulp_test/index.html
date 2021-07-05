@@ -23,6 +23,25 @@
             {{ text_notify }}
             <button v-on:click="hideNotify()" class="notify__close">X</button>
         </div>
+        <header class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <div class="header__logo">
+                        <img src="src/image/logo.png" alt="Premium Quality Bakery">
+                    </div>
+                    <ul class="header__nav">
+                        <li class="header__li" v-for="(link, i) in headerLinks" :key="i"><a :href="link.href"
+                                class="header__link" :title="link.title">{{link.name}}</a></li>
+                    </ul>
+                    <div class="header__buttons">
+                        <a class="header__button" :href="button.href" class="button"
+                            v-for="(button, i) in headerButtons" :key="i"><img class="header__img"
+                                :src="'src/image/' + button.src" :alt="button.alt" :title="button.title"></a>
+
+                    </div>
+                </div>
+            </div>
+        </header>
         <!-- <h1>{{ show ? title : 'Hello!'}}</h1> -->
         <!-- <h1>{{ title.toUpperCase()}}</h1> -->
         <!-- <h1 v-html="title"></h1> -->
@@ -56,7 +75,7 @@
             </div>
         </div>
 
-
+        <h2>Average Price: {{ averagePrice | viewPrice('EUR')}}</h2>
         <div class="container">
             <div class="row gy-2">
 
@@ -65,8 +84,8 @@
                         <img :src="'src/image/' + product.image" :alt="product.title">
                         <div class="card__name text-center mt-2 mb-1">{{i + "-"+ product.title }}</div>
                         <div class="price">
-                            <span class="price_new">${{getNewPrice(product)}}</span>
-                            <span class="price_old" v-if="product.discount">${{product.price}}</span>
+                            <span class="price_new">{{getNewPrice(product) | viewPrice('EUR') }}</span>
+                            <span class="price_old" v-if="product.discount">{{product.price | viewPrice('EUR')}}</span>
                         </div>
                         <div class="col-12 px-3">
                             <button type="button" class="w-100 btn btn-primary">Primary</button>
