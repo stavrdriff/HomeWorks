@@ -153,8 +153,21 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        background: none;
     }
 }
 .container {
     width: 1170px;
+}
+.popup {
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30vw;
+    height: 30vh;
+    background: #999999;
+    z-index: 1000;
+    margin-left: -15vw;
+    margin-top: -15vh;
 }

@@ -15,6 +15,7 @@ let app = new Vue({
       rightMouse: 'right click',
       whatMouse: '',
       formatTime: '',
+      showpopup: false,
       products: [
          {
             id: 123,
@@ -92,6 +93,12 @@ let app = new Vue({
       ]
    },
    methods: {
+      showPopup() {
+         this.showpopup = true;
+      },
+      hidePopup() {
+         this.showpopup = false;
+      },
       firstLetterToUpperCase(text) {
          let text_arr = text.split(' ')
          let arr_Upper = text_arr.map(item => {

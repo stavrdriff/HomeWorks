@@ -23,6 +23,10 @@
             {{ text_notify }}
             <button v-on:click="hideNotify()" class="notify__close">X</button>
         </div>
+        <div class="popup" v-if="showpopup">
+            <h2 class="popup__title"></h2>
+            <button class="popup__close" v-on:click="hidePopup()">X</button>
+        </div>
         <header class="header">
             <div class="container">
                 <div class="header__wrap">
@@ -34,10 +38,9 @@
                                 class="header__link" :title="link.title">{{link.name}}</a></li>
                     </ul>
                     <div class="header__buttons">
-                        <a class="header__button" :href="button.href" class="button"
+                        <button class="header__button" v-on:click="showPopup()" :href="button.href"
                             v-for="(button, i) in headerButtons" :key="i"><img class="header__img"
-                                :src="'src/image/' + button.src" :alt="button.alt" :title="button.title"></a>
-
+                                :src="'src/image/' + button.src" :alt="button.alt" :title="button.title"></button>
                     </div>
                 </div>
             </div>
